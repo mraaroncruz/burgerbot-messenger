@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Install hex
+mix local.hex   --force
+mix local.rebar --force
+
+# Initial setup
+mix deps.get --only prod
+MIX_ENV=prod mix compile
+
+# Compile assets
+# brunch build --production
+# MIX_ENV=prod mix phoenix.digest
+
+# Custom tasks (like DB migrations)
+# MIX_ENV=prod mix ecto.migrate

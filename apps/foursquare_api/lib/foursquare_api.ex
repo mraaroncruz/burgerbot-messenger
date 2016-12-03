@@ -1,0 +1,2 @@
+defmodule FoursquareApi do
+end
